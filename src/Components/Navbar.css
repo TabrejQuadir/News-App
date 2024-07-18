@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navv {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.navv.active {
+  background: rgba(43, 58, 118, 0.95);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  font-size: 1.25rem;
+  color: #93d72d;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+}
+
+.nav-link {
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #93d72d;
+  transition: width 0.4s ease;
+  -webkit-transition: width 0.4s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  background: #93d72d;
+}
+
+.nav-link:hover {
+  color: #93d72d !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.nav-item {
+  margin: 0 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+#navbarNav ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.dateTimeInfo {
+  display: flex;
+  gap: 15px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.dateTimeInfo .date, .dateTimeInfo .time {
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.dateTimeInfo .date::before, .dateTimeInfo .time::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12 8V12H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E') no-repeat center;
+}
+
+.dateTimeInfo .time::before {
+  background: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12 6V12H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E') no-repeat center;
+}
+
+.logo-mobile {
+  color: #93d72d;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-flex !important;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 5px #93d72d, 
+    0 0 10px #93d72d, 
+    0 0 15px #ff00ff, 
+    0 0 20px #ff00ff, 
+    0 0 25px #ff00ff, 
+    0 0 30px #ff00ff, 
+    0 0 35px #ff00ff, 
+    0 0 40px #ff00ff;
+  animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 
+      0 0 5px #93d72d, 
+      0 0 10px #93d72d, 
+      0 0 15px #ff00ff, 
+      0 0 20px #ff00ff, 
+      0 0 25px #ff00ff, 
+      0 0 30px #ff00ff, 
+      0 0 35px #ff00ff, 
+      0 0 40px #ff00ff;
+  }
+  50% {
+    text-shadow: 
+      0 0 10px #93d72d, 
+      0 0 15px #93d72d, 
+      0 0 20px #ff00ff, 
+      0 0 30px #ff00ff, 
+      0 0 40px #ff00ff, 
+      0 0 50px #ff00ff, 
+      0 0 60px #ff00ff, 
+      0 0 70px #ff00ff;
+  }
+  100% {
+    text-shadow: 
+      0 0 15px #93d72d, 
+      0 0 20px #93d72d, 
+      0 0 25px #ff00ff, 
+      0 0 35px #ff00ff, 
+      0 0 45px #ff00ff, 
+      0 0 55px #ff00ff, 
+      0 0 65px #ff00ff, 
+      0 0 75px #ff00ff;
+  }
+}
+
+.small{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .logo-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .dateTimeInfo {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .nav-item {
+    margin: 0 10px;
+  }
+
+  #navbarNav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .collapse {
+    padding: 10px 0;
+  }
+}
