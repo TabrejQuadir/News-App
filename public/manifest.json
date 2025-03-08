@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "News App",
+  "name": "Live News App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,14 +8,30 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "android/android-launchericon-192-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "android/android-launchericon-512-512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "ios/180.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "windows11/Square150x150Logo.scale-200.png",
+      "type": "image/png",
+      "sizes": "300x300"
+    },
+    {
+      "src": "windows11/Square44x44Logo.scale-200.png",
+      "type": "image/png",
+      "sizes": "88x88"
     }
   ],
   "start_url": ".",
