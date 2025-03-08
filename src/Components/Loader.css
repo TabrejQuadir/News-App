@@ -3,15 +3,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 300px; /* Instead of 100vh to make it more appropriate for the content area */
+  width: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .loader {
-  border: 4px solid rgba(255, 255, 255, 0.3);
+  border: 6px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  border-top: 4px solid #ffffff;
-  width: 50px;
-  height: 50px;
+  border-top: 6px solid #93d72d; /* Match your site's accent color */
+  width: 60px;
+  height: 60px;
   animation: spin 1s linear infinite;
 }
 
